@@ -1,0 +1,1231 @@
+{
+	"info": {
+		"_postman_id": "808f8a83-a131-4452-9342-9b1f3ad28e37",
+		"name": "ITM Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25013633"
+	},
+	"item": [
+		{
+			"name": "customers",
+			"item": [
+				{
+					"name": "getCustomers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/customers?token=admintoken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "admintoken"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getCustomers",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/customers?token=admintoken",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"customers"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "admintoken"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 00:39:01 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "900"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"response\": {\n            \"customers\": {\n                \"1\": {\n                    \"address\": \"Çankaya Kuğulu, Park, 06690 Çankaya/Ankara\",\n                    \"email\": \"aliyilmaz@ali.com\",\n                    \"firstName\": \"Ali\",\n                    \"id\": 1,\n                    \"lastName\": \"Yılmaz\",\n                    \"phone\": \"90555111223311\"\n                },\n                \"2\": {\n                    \"address\": \"Bahçelievler, İsmet İnönü Blv. No:4, 06490 Çankaya/Ankara\",\n                    \"email\": \"mehmetkaya@mehmet.com\",\n                    \"firstName\": \"Mehmet\",\n                    \"id\": 2,\n                    \"lastName\": \"Kaya\",\n                    \"phone\": \"90555111223411\"\n                },\n                \"3\": {\n                    \"address\": \"Çankaya, Şht. Ersan Cd. No: 14, 06690 Çankaya/Ankara\",\n                    \"email\": \"aysecayci@ayse.com\",\n                    \"firstName\": \"Ayşe\",\n                    \"id\": 3,\n                    \"lastName\": \"Çaycı\",\n                    \"phone\": \"90555111223511\"\n                },\n                \"4\": {\n                    \"address\": \"Çankaya, Merkez, 06690 Çankaya/Ankara\",\n                    \"email\": \"fatma@girik.com\",\n                    \"firstName\": \"Fatma\",\n                    \"id\": 4,\n                    \"lastName\": \"Girik\",\n                    \"phone\": \"123456789\"\n                },\n                \"20\": {\n                    \"address\": \"Çankaya, Atakule, 06690 Çankaya/Ankara\",\n                    \"email\": \"fatmafalci@fatma.com\",\n                    \"firstName\": \"Fatma\",\n                    \"id\": 20,\n                    \"lastName\": \"Falcı\",\n                    \"phone\": \"905551112236\"\n                }\n            },\n            \"totalCount\": 5\n        },\n        \"type\": \"OK\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"token\":\"admintoken\",\r\n        \"request\":{\r\n            \"customer\":{\r\n                \"id\":4,\r\n                \"firstName\":\"Fatma\",\r\n                \"lastName\":\"Girik\",\r\n                \"phone\":123456789,\r\n                \"email\":\"fatma@girik.com\",\r\n                \"address\":\"Çankaya, Merkez, 06690 Çankaya/Ankara\"\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateCustomer",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"token\":\"admintoken\",\r\n        \"request\":{\r\n            \"customer\":{\r\n                \"id\":4,\r\n                \"firstName\":\"Fatma\",\r\n                \"lastName\":\"Girik\",\r\n                \"phone\":123456789,\r\n                \"email\":\"fatma@girik.com\",\r\n                \"address\":\"Çankaya, Merkez, 06690 Çankaya/Ankara\"\r\n            }\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"customers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 00:39:11 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"response\": \"CUSTOMER UPDATED\",\n        \"status\": \"OK\",\n        \"type\": \"OK\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "insertCustomer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"token\":\"admintoken\",\r\n        \"request\":{\r\n            \"customer\":{\r\n                \"firstName\":\"Mehmet\",\r\n                \"lastName\":\"Kesmez\",\r\n                \"phone\":9055511122999,\r\n                \"email\":\"mehmet@kesmez.com\",\r\n                \"address\":\"Çankaya, Atakule, 06690 Çankaya/Ankara\"\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/customers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "insertCustomer",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"token\":\"admintoken\",\r\n        \"request\":{\r\n            \"customer\":{\r\n                \"firstName\":\"Mehmet\",\r\n                \"lastName\":\"Kesmez\",\r\n                \"phone\":9055511122999,\r\n                \"email\":\"mehmet@kesmez.com\",\r\n                \"address\":\"Çankaya, Atakule, 06690 Çankaya/Ankara\"\r\n            }\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/customers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"customers"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 00:39:36 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "71"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"response\": \"NEW CUSTOMER INSERTED\",\n        \"status\": \"OK\",\n        \"type\": \"OK\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "getProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/products?token=usertoken2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "usertoken2"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getProducts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/products?token=usertoken2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "usertoken2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 00:39:52 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1080"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"response\": {\n            \"products\": {\n                \"4\": {\n                    \"basePrice\": 42000,\n                    \"category\": \"telefon\",\n                    \"createdAt\": \"2023-10-30T09:39:15.254408Z\",\n                    \"discount\": 2,\n                    \"id\": 4,\n                    \"isValid\": true,\n                    \"name\": \"Apple iPhone 12 Pro\",\n                    \"payPrice\": 49392\n                },\n                \"5\": {\n                    \"basePrice\": 50000,\n                    \"category\": \"telefon\",\n                    \"createdAt\": \"2023-10-30T09:39:26.358844Z\",\n                    \"discount\": 0,\n                    \"id\": 5,\n                    \"isValid\": true,\n                    \"name\": \"Apple iPhone 12 Pro Max\",\n                    \"payPrice\": 60000\n                },\n                \"6\": {\n                    \"basePrice\": 44000,\n                    \"category\": \"telefon\",\n                    \"createdAt\": \"2023-10-30T09:39:35.784709Z\",\n                    \"discount\": 0,\n                    \"id\": 6,\n                    \"isValid\": true,\n                    \"name\": \"Apple iPhone 13\",\n                    \"payPrice\": 52800\n                },\n                \"7\": {\n                    \"basePrice\": 50000,\n                    \"category\": \"telefon\",\n                    \"createdAt\": \"2023-10-30T09:39:44.193477Z\",\n                    \"discount\": 1,\n                    \"id\": 7,\n                    \"isValid\": true,\n                    \"name\": \"Apple iPhone 13 Pro\",\n                    \"payPrice\": 59400\n                },\n                \"8\": {\n                    \"basePrice\": 55000,\n                    \"category\": \"telefon\",\n                    \"createdAt\": \"2023-10-30T09:39:52.266899Z\",\n                    \"discount\": 1,\n                    \"id\": 8,\n                    \"isValid\": true,\n                    \"name\": \"Apple iPhone 13 Pro Max\",\n                    \"payPrice\": 65340\n                },\n                \"9\": {\n                    \"basePrice\": 70000,\n                    \"category\": \"telefon\",\n                    \"createdAt\": \"2023-10-31T03:09:11.862562Z\",\n                    \"discount\": 10,\n                    \"id\": 9,\n                    \"isValid\": true,\n                    \"name\": \"Apple iPhone 14 Pro Max\",\n                    \"payPrice\": 69300\n                }\n            },\n            \"totalCount\": 6\n        },\n        \"type\": \"OK\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateProducts",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"token\":\"admintoken\",\r\n        \"request\":{\r\n            \"product\":{\r\n                \"id\":9,\r\n                \"name\":\"Apple iPhone 14 Pro Max\",\r\n                \"category\":\"telefon\",\r\n                \"isValid\":true,\r\n                \"basePrice\":70000,\r\n                \"discount\":10,\r\n                \"vat\":10\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateProducts",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"token\":\"admintoken\",\r\n        \"request\":{\r\n            \"product\":{\r\n                \"id\":9,\r\n                \"name\":\"Apple iPhone 14 Pro Max\",\r\n                \"category\":\"telefon\",\r\n                \"isValid\":true,\r\n                \"basePrice\":70000,\r\n                \"discount\":10,\r\n                \"vat\":10\r\n            }\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 00:40:08 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"response\": \"PRODUCT UPDATED\",\n        \"status\": \"OK\",\n        \"type\": \"OK\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "deleteProducts",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"token\":\"admintoken\",\r\n        \"request\":{\r\n            \"product\":{\r\n                \"id\":3\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "deleteProducts",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"token\":\"admintoken\",\r\n        \"request\":{\r\n            \"product\":{\r\n                \"id\":3\r\n            }\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 00:40:14 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"response\": \"PRODUCT DELETED\",\n        \"status\": \"OK\",\n        \"type\": \"OK\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "insertProducts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"token\":\"admintoken\",\r\n        \"request\":{\r\n            \"product\":{\r\n                \"name\":\"Apple iPhone 15 Pro Max\",\r\n                \"category\":\"telefon\",\r\n                \"isValid\":true,\r\n                \"basePrice\":70000,\r\n                \"discount\":10,\r\n                \"vat\":0\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "insertProducts",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"token\":\"admintoken\",\r\n        \"request\":{\r\n            \"product\":{\r\n                \"name\":\"Apple iPhone 15 Pro Max\",\r\n                \"category\":\"telefon\",\r\n                \"isValid\":true,\r\n                \"basePrice\":70000,\r\n                \"discount\":10,\r\n                \"vat\":0\r\n            }\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/products",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"products"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 00:40:43 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"response\": \"NEW PRODUCT INSERTED\",\n        \"status\": \"OK\",\n        \"type\": \"OK\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "getOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/orders?p=3&token=admintoken",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders"
+							],
+							"query": [
+								{
+									"key": "p",
+									"value": "3"
+								},
+								{
+									"key": "token",
+									"value": "admintoken"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getOrders",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/orders?p=3&token=admintoken",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orders"
+									],
+									"query": [
+										{
+											"key": "p",
+											"value": "3"
+										},
+										{
+											"key": "token",
+											"value": "admintoken"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 00:40:55 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"response\": {\n            \"maxPage\": 3443,\n            \"orders\": {\n                \"2a1262b08739267fc06c\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191645\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191647\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191649\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191651\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259000,\n                    \"insertDate\": \"2023-10-31T03:21:24.88409Z\",\n                    \"orderId\": \"2a1262b08739267fc06c\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"2bed81825e442810a872\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191712\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191713\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191714\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191715\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259016,\n                    \"insertDate\": \"2023-10-31T03:21:25.489445Z\",\n                    \"orderId\": \"2bed81825e442810a872\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"326b8d39189b4788be43\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191728\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191730\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191733\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191735\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259020,\n                    \"insertDate\": \"2023-10-31T03:21:25.646121Z\",\n                    \"orderId\": \"326b8d39189b4788be43\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"3c305e8fe1360d41cd7e\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191680\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191683\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191684\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191686\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259008,\n                    \"insertDate\": \"2023-10-31T03:21:25.211068Z\",\n                    \"orderId\": \"3c305e8fe1360d41cd7e\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"50431734b5e452472ff0\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191656\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191658\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191660\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191662\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259002,\n                    \"insertDate\": \"2023-10-31T03:21:24.992931Z\",\n                    \"orderId\": \"50431734b5e452472ff0\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"5f80e38025014e3405a6\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191700\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191701\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191702\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1191703\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        }\n                    },\n                    \"id\": 259013,\n                    \"insertDate\": \"2023-10-31T03:21:25.381096Z\",\n                    \"orderId\": \"5f80e38025014e3405a6\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"5fed6a7f85f3356a74b3\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191741\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191743\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191745\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191746\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259024,\n                    \"insertDate\": \"2023-10-31T03:21:25.7571Z\",\n                    \"orderId\": \"5fed6a7f85f3356a74b3\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"6090e8598a509306cf1c\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191681\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191682\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191685\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1191687\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        }\n                    },\n                    \"id\": 259009,\n                    \"insertDate\": \"2023-10-31T03:21:25.211088Z\",\n                    \"orderId\": \"6090e8598a509306cf1c\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"6b80b53edfafd7a99a6a\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191729\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191731\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191732\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191734\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259021,\n                    \"insertDate\": \"2023-10-31T03:21:25.646126Z\",\n                    \"orderId\": \"6b80b53edfafd7a99a6a\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"7c83edf99b2eaef71019\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191736\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191737\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191738\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1191739\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        }\n                    },\n                    \"id\": 259022,\n                    \"insertDate\": \"2023-10-31T03:21:25.712454Z\",\n                    \"orderId\": \"7c83edf99b2eaef71019\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"840e9d00292ac49e9e9c\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191752\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191755\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191757\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191759\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259026,\n                    \"insertDate\": \"2023-10-31T03:21:25.865375Z\",\n                    \"orderId\": \"840e9d00292ac49e9e9c\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"930e0637237a8017387e\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191705\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1191707\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191709\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191711\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        }\n                    },\n                    \"id\": 259015,\n                    \"insertDate\": \"2023-10-31T03:21:25.428374Z\",\n                    \"orderId\": \"930e0637237a8017387e\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"9451fee0eae5dc8c4507\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191693\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191695\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1191697\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191699\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        }\n                    },\n                    \"id\": 259012,\n                    \"insertDate\": \"2023-10-31T03:21:25.319172Z\",\n                    \"orderId\": \"9451fee0eae5dc8c4507\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"949182c4c8cecd3e2092\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191740\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191742\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191744\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1191747\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        }\n                    },\n                    \"id\": 259023,\n                    \"insertDate\": \"2023-10-31T03:21:25.757073Z\",\n                    \"orderId\": \"949182c4c8cecd3e2092\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"990bb29a15a65da28f7e\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191652\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191653\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191654\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191655\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259001,\n                    \"insertDate\": \"2023-10-31T03:21:24.946354Z\",\n                    \"orderId\": \"990bb29a15a65da28f7e\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"a6b633b3af1fd91dc1f3\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191753\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191754\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191756\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191758\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259027,\n                    \"insertDate\": \"2023-10-31T03:21:25.865377Z\",\n                    \"orderId\": \"a6b633b3af1fd91dc1f3\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"b748ca2097b46f35dfc3\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191760\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191761\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191762\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1191763\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        }\n                    },\n                    \"id\": 259028,\n                    \"insertDate\": \"2023-10-31T03:21:25.926735Z\",\n                    \"orderId\": \"b748ca2097b46f35dfc3\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"c947c9620e67e11a033d\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191692\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191694\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1191696\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191698\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        }\n                    },\n                    \"id\": 259011,\n                    \"insertDate\": \"2023-10-31T03:21:25.319128Z\",\n                    \"orderId\": \"c947c9620e67e11a033d\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"ced6d2a280eb1af86ee2\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191765\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191767\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191769\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191771\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259029,\n                    \"insertDate\": \"2023-10-31T03:21:25.97304Z\",\n                    \"orderId\": \"ced6d2a280eb1af86ee2\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"d361a9e19cbb9dd56ffa\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191668\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1191670\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191672\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191674\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        }\n                    },\n                    \"id\": 259005,\n                    \"insertDate\": \"2023-10-31T03:21:25.102408Z\",\n                    \"orderId\": \"d361a9e19cbb9dd56ffa\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"dd50a0d7c8bd4eacfc14\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191669\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191671\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1191673\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191675\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        }\n                    },\n                    \"id\": 259006,\n                    \"insertDate\": \"2023-10-31T03:21:25.102424Z\",\n                    \"orderId\": \"dd50a0d7c8bd4eacfc14\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"e59c214d8bc6edf1b925\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191724\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191725\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191726\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191727\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259019,\n                    \"insertDate\": \"2023-10-31T03:21:25.600139Z\",\n                    \"orderId\": \"e59c214d8bc6edf1b925\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"e6cbeb9fc6d9cc027eda\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191664\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191665\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191666\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191667\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259004,\n                    \"insertDate\": \"2023-10-31T03:21:25.056335Z\",\n                    \"orderId\": \"e6cbeb9fc6d9cc027eda\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"ea87b0c2be6cbbcb827b\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191657\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191659\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191661\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191663\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259003,\n                    \"insertDate\": \"2023-10-31T03:21:24.992978Z\",\n                    \"orderId\": \"ea87b0c2be6cbbcb827b\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"ee7ef94fbfd5095a100b\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191676\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191677\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191678\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191679\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259007,\n                    \"insertDate\": \"2023-10-31T03:21:25.164695Z\",\n                    \"orderId\": \"ee7ef94fbfd5095a100b\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"efcdbc4fab6281a9cb7e\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191748\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191749\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191750\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191751\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259025,\n                    \"insertDate\": \"2023-10-31T03:21:25.819119Z\",\n                    \"orderId\": \"efcdbc4fab6281a9cb7e\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"f3ad0d99d0bbca503b2a\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191716\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191718\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191720\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1191722\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        }\n                    },\n                    \"id\": 259017,\n                    \"insertDate\": \"2023-10-31T03:21:25.535657Z\",\n                    \"orderId\": \"f3ad0d99d0bbca503b2a\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"f49630d7c461a37617c6\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191688\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191689\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191690\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191691\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259010,\n                    \"insertDate\": \"2023-10-31T03:21:25.2728Z\",\n                    \"orderId\": \"f49630d7c461a37617c6\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"f726d88d12db2a4a5414\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191717\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191719\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191721\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191723\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259018,\n                    \"insertDate\": \"2023-10-31T03:21:25.535707Z\",\n                    \"orderId\": \"f726d88d12db2a4a5414\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"faff11af2212b865b47e\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1191704\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1191706\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1191708\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1191710\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259014,\n                    \"insertDate\": \"2023-10-31T03:21:25.428354Z\",\n                    \"orderId\": \"faff11af2212b865b47e\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                }\n            },\n            \"responseCount\": 30,\n            \"totalCount\": 103275\n        },\n        \"type\": \"OK\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "getMyOrders - User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/myorders?token=usertoken1&p=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"myorders"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "usertoken1"
+								},
+								{
+									"key": "p",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "getMyOrders - User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/myorders?token=usertoken1&p=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"myorders"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "usertoken1"
+										},
+										{
+											"key": "p",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 00:41:02 GMT"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"response\": {\n            \"maxPage\": 3443,\n            \"orders\": {\n                \"03adad98511dbce17a44\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192100\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1192102\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192104\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192106\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        }\n                    },\n                    \"id\": 259114,\n                    \"insertDate\": \"2023-10-31T03:21:29.02376Z\",\n                    \"orderId\": \"03adad98511dbce17a44\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"04ea9ac1fecb04e71e9a\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192120\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192121\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192122\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1192123\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        }\n                    },\n                    \"id\": 259118,\n                    \"insertDate\": \"2023-10-31T03:21:29.195587Z\",\n                    \"orderId\": \"04ea9ac1fecb04e71e9a\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"07514eaf28c978820469\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192124\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192125\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1192126\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192127\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        }\n                    },\n                    \"id\": 259119,\n                    \"insertDate\": \"2023-10-31T03:21:29.24312Z\",\n                    \"orderId\": \"07514eaf28c978820469\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"19461a5abdb5a80a834e\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192088\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192090\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192092\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192094\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259110,\n                    \"insertDate\": \"2023-10-31T03:21:28.914085Z\",\n                    \"orderId\": \"19461a5abdb5a80a834e\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"2333bb3657ff10c72cb9\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192096\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192097\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192098\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192099\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259112,\n                    \"insertDate\": \"2023-10-31T03:21:28.97803Z\",\n                    \"orderId\": \"2333bb3657ff10c72cb9\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"3e803184ecbf4864d1c0\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192101\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192103\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192105\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192107\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259113,\n                    \"insertDate\": \"2023-10-31T03:21:29.023739Z\",\n                    \"orderId\": \"3e803184ecbf4864d1c0\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"42957b5a5199966a46ed\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192084\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192085\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192086\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192087\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259109,\n                    \"insertDate\": \"2023-10-31T03:21:28.867553Z\",\n                    \"orderId\": \"42957b5a5199966a46ed\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"4f2aadb4d2fdf34bdd23\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192004\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192006\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192008\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192010\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259090,\n                    \"insertDate\": \"2023-10-31T03:21:28.146675Z\",\n                    \"orderId\": \"4f2aadb4d2fdf34bdd23\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"582476e1562d4dcf1734\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192029\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192031\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192033\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192035\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259096,\n                    \"insertDate\": \"2023-10-31T03:21:28.365135Z\",\n                    \"orderId\": \"582476e1562d4dcf1734\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"617bda67d823a4559b98\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192028\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192030\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192032\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192034\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259095,\n                    \"insertDate\": \"2023-10-31T03:21:28.365134Z\",\n                    \"orderId\": \"617bda67d823a4559b98\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"64f15aa3c114637df672\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192076\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1192078\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192080\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192082\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        }\n                    },\n                    \"id\": 259108,\n                    \"insertDate\": \"2023-10-31T03:21:28.805002Z\",\n                    \"orderId\": \"64f15aa3c114637df672\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"75dd9a1e9d83311a7b8d\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192016\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192018\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192020\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192022\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259092,\n                    \"insertDate\": \"2023-10-31T03:21:28.256561Z\",\n                    \"orderId\": \"75dd9a1e9d83311a7b8d\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"87af6435a05754ae14af\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192089\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1192091\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192093\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192095\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        }\n                    },\n                    \"id\": 259111,\n                    \"insertDate\": \"2023-10-31T03:21:28.914108Z\",\n                    \"orderId\": \"87af6435a05754ae14af\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"8a19976c80bc4e623dac\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192072\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192073\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192074\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192075\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259106,\n                    \"insertDate\": \"2023-10-31T03:21:28.759929Z\",\n                    \"orderId\": \"8a19976c80bc4e623dac\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"8f0e1dd689fa166ecded\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192060\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192061\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192062\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192063\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259103,\n                    \"insertDate\": \"2023-10-31T03:21:28.649322Z\",\n                    \"orderId\": \"8f0e1dd689fa166ecded\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"9465ce11584fc3681d87\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192053\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192055\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1192057\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192059\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        }\n                    },\n                    \"id\": 259101,\n                    \"insertDate\": \"2023-10-31T03:21:28.585881Z\",\n                    \"orderId\": \"9465ce11584fc3681d87\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"999dd4d9e23127f366ec\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192108\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192109\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192110\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192111\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259115,\n                    \"insertDate\": \"2023-10-31T03:21:29.085468Z\",\n                    \"orderId\": \"999dd4d9e23127f366ec\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"a8a133e2449fea2a9155\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192017\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192019\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192021\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192023\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259093,\n                    \"insertDate\": \"2023-10-31T03:21:28.256585Z\",\n                    \"orderId\": \"a8a133e2449fea2a9155\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"cb0625819ddc47b7d35f\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192041\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192043\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192045\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192047\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259098,\n                    \"insertDate\": \"2023-10-31T03:21:28.47655Z\",\n                    \"orderId\": \"cb0625819ddc47b7d35f\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"cc89b280688eb2ceeb58\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192065\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192067\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192069\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1192071\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        }\n                    },\n                    \"id\": 259104,\n                    \"insertDate\": \"2023-10-31T03:21:28.696615Z\",\n                    \"orderId\": \"cc89b280688eb2ceeb58\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"d688c72a6c189950aed6\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192012\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192013\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192014\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192015\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259091,\n                    \"insertDate\": \"2023-10-31T03:21:28.209828Z\",\n                    \"orderId\": \"d688c72a6c189950aed6\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"d80b4d09dabd77e9a7a7\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192024\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192025\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192026\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1192027\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        }\n                    },\n                    \"id\": 259094,\n                    \"insertDate\": \"2023-10-31T03:21:28.319377Z\",\n                    \"orderId\": \"d80b4d09dabd77e9a7a7\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"dc53be265eae4cfabde6\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192040\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192042\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192044\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192046\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259099,\n                    \"insertDate\": \"2023-10-31T03:21:28.476557Z\",\n                    \"orderId\": \"dc53be265eae4cfabde6\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"e2cd2cc903286aa45fcc\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192064\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192066\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192068\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192070\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259105,\n                    \"insertDate\": \"2023-10-31T03:21:28.696648Z\",\n                    \"orderId\": \"e2cd2cc903286aa45fcc\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"e34a6658fd6bb3fa583a\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192052\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192054\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192056\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192058\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259102,\n                    \"insertDate\": \"2023-10-31T03:21:28.585878Z\",\n                    \"orderId\": \"e34a6658fd6bb3fa583a\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"e680f4cf3113ecb20e20\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192048\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192049\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192050\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1192051\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        }\n                    },\n                    \"id\": 259100,\n                    \"insertDate\": \"2023-10-31T03:21:28.539022Z\",\n                    \"orderId\": \"e680f4cf3113ecb20e20\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"e91d92e44ee6df04b661\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192113\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192115\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192117\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192119\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259116,\n                    \"insertDate\": \"2023-10-31T03:21:29.13306Z\",\n                    \"orderId\": \"e91d92e44ee6df04b661\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"ec3f7711f74465545284\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192077\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192079\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192081\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192083\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259107,\n                    \"insertDate\": \"2023-10-31T03:21:28.805007Z\",\n                    \"orderId\": \"ec3f7711f74465545284\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"eff8ba8a8eef868d2fac\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192036\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        },\n                        \"1192037\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192038\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192039\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        }\n                    },\n                    \"id\": 259097,\n                    \"insertDate\": \"2023-10-31T03:21:28.428993Z\",\n                    \"orderId\": \"eff8ba8a8eef868d2fac\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                },\n                \"f18db20c2656abe6a260\": {\n                    \"customer\": {\n                        \"email\": \"mehmetkaya@mehmet.com\",\n                        \"firstName\": \"Mehmet\",\n                        \"lastName\": \"Kaya\",\n                        \"phone\": \"90555111223411\"\n                    },\n                    \"details\": {\n                        \"1192112\": {\n                            \"productBasePrice\": 42000,\n                            \"productDiscount\": 2,\n                            \"productId\": 4,\n                            \"productName\": \"Apple iPhone 12 Pro\",\n                            \"productPayPrice\": 49392,\n                            \"productVat\": 20,\n                            \"quantity\": 4\n                        },\n                        \"1192114\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 0,\n                            \"productId\": 5,\n                            \"productName\": \"Apple iPhone 12 Pro Max\",\n                            \"productPayPrice\": 60000,\n                            \"productVat\": 20,\n                            \"quantity\": 5\n                        },\n                        \"1192116\": {\n                            \"productBasePrice\": 44000,\n                            \"productDiscount\": 0,\n                            \"productId\": 6,\n                            \"productName\": \"Apple iPhone 13\",\n                            \"productPayPrice\": 52800,\n                            \"productVat\": 20,\n                            \"quantity\": 6\n                        },\n                        \"1192118\": {\n                            \"productBasePrice\": 50000,\n                            \"productDiscount\": 1,\n                            \"productId\": 7,\n                            \"productName\": \"Apple iPhone 13 Pro\",\n                            \"productPayPrice\": 59400,\n                            \"productVat\": 20,\n                            \"quantity\": 7\n                        }\n                    },\n                    \"id\": 259117,\n                    \"insertDate\": \"2023-10-31T03:21:29.133056Z\",\n                    \"orderId\": \"f18db20c2656abe6a260\",\n                    \"status\": \"Waiting for payment\",\n                    \"totalPrice\": \"Kaya\",\n                    \"transactionMethod\": \"MethodX\"\n                }\n            },\n            \"totalCount\": 103275\n        },\n        \"type\": \"OK\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "updateOrder",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"token\":\"admintoken\",\r\n        \"request\":{\r\n            \"order\":{\r\n                \"id\":259114,\r\n                \"status\":5\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "updateOrder",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"token\":\"admintoken\",\r\n        \"request\":{\r\n            \"order\":{\r\n                \"id\":259114,\r\n                \"status\":5\r\n            }\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 00:41:56 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"response\": \"ORDER UPDATED\",\n        \"status\": \"OK\",\n        \"type\": \"OK\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "cancelOrder - User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"token\":\"usertoken2\",\r\n        \"request\":{\r\n            \"order\":{\r\n                \"id\":259114,\r\n                \"status\":6\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/myorders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"myorders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "cancelOrder - User",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"token\":\"usertoken2\",\r\n        \"request\":{\r\n            \"order\":{\r\n                \"id\":259114,\r\n                \"status\":6\r\n            }\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/myorders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"myorders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 00:42:09 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"response\": \"ORDER UPDATED\",\n        \"status\": \"OK\",\n        \"type\": \"OK\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "insertOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"token\":\"usertoken1\",\r\n        \"request\":{\r\n            \"order\":{\r\n                \"transactionMethod\":\"MethodX\",\r\n                \"productlist\":\"1,2,2,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,7,7,7,7,7,7,7\"\r\n            }\r\n        }\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "insertOrder",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\":{\r\n        \"token\":\"usertoken1\",\r\n        \"request\":{\r\n            \"order\":{\r\n                \"transactionMethod\":\"MethodX\",\r\n                \"productlist\":\"1,2,2,3,3,3,4,4,4,4,5,5,5,5,5,6,6,6,6,6,6,7,7,7,7,7,7,7\"\r\n            }\r\n        }\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/orders",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"orders"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 31 Oct 2023 23:14:21 GMT"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"response\": \"NEW ORDER INSERTED\",\n        \"status\": \"OK\",\n        \"type\": \"OK\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "methodx-payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\":{\r\n        \"status\":\"OK\",\r\n        \"transactionid\":\"03adad98511dbce17a44\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/methodx-payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"methodx-payment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "methodx-payment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"status\":\"OK\",\r\n        \"transactionid\":\"03adad98511dbce17a44\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/methodx-payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"methodx-payment"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 31 Oct 2023 00:41:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "OK"
+				}
+			]
+		},
+		{
+			"name": "methody-payment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\":{\r\n        \"status\":\"OK\",\r\n        \"transactionid\":\"03adad98511dbce17a44\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/methody-payment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"methody-payment"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "methody-payment",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"status\":\"OK\",\r\n        \"transactionid\":\"03adad98511dbce17a44\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/methody-payment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"methody-payment"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 31 Oct 2023 00:42:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "5"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "ERROR"
+				}
+			]
+		},
+		{
+			"name": "companya-shipping",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\":{\r\n        \"status\":\"OK\",\r\n        \"order\":\"03adad98511dbce17a44\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/companya-shipping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"companya-shipping"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "companya-shipping",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"status\":\"OK\",\r\n        \"order\":\"03adad98511dbce17a44\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/companya-shipping",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"companya-shipping"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 31 Oct 2023 00:42:38 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "OK"
+				}
+			]
+		},
+		{
+			"name": "companya-delivered",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\":{\r\n        \"status\":\"OK\",\r\n        \"order\":\"03adad98511dbce17a44\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/companya-delivered",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"companya-delivered"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "companya-delivered",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\":{\r\n        \"status\":\"OK\",\r\n        \"order\":\"03adad98511dbce17a44\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/companya-delivered",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"companya-delivered"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 31 Oct 2023 00:42:44 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "OK"
+				}
+			]
+		}
+	]
+}
